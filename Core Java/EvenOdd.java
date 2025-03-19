@@ -23,14 +23,14 @@ public class EvenOdd{
         // }
 
         //Calculate Simple interest
-        System.out.print("Enter Principle Amount(P) : ");
-        int P = sc.nextInt();
-        System.out.print("Enter Rate of Interest (R) : ");
-        double R =sc.nextInt();
-        System.out.print("Enter the year (Y) : ");
-        double Y =sc.nextInt();
+        // System.out.print("Enter Principle Amount(P) : ");
+        // int P = sc.nextInt();
+        // System.out.print("Enter Rate of Interest (R) : ");
+        // double R =sc.nextInt();
+        // System.out.print("Enter the year (Y) : ");
+        // double Y =sc.nextInt();
 
-        double cal = ((P*R*Y)/100);
-        System.out.println("Total Interest Amount Is : "+ cal);
+        // double cal = ((P*R*Y)/100);
+        // System.out.println("Total Interest Amount Is : "+ cal);
     }
 }
