@@ -5,6 +5,7 @@ public class NaturalNo {
         int sum =0 ;
         while(i<=n){
             sum = sum + i;
+            i++;
         }
         System.out.println("Sum of 10 Natural : " + sum);
 
