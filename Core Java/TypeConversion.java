@@ -23,6 +23,14 @@ public class TypeConversion {
         System.out.println((int)ch2);
 
         System.out.println(ch2-ch1);
+         
+        // if one oprand is long ,float and double the hole expression is promoted to long . float or double respectively
+        int x = 10;
+        float y = 20.12f;
+        double z = 29;
+        long l = 45;
+        double ans = x + y + z + l;
+        System.out.println("Respectively Assign Value : "+ (int)ans);
 
     }
 }
