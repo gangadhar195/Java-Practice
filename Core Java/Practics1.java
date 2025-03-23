@@ -54,8 +54,10 @@ public class Practics1 {
         // double result = (f * b) + ( i % c) -(d*s);
         // System.out.println(result);
 
-        
-        
+
+        //questions 5 
+        int $ = 5;
+        System.out.println($);
 
 
 
