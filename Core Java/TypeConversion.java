@@ -32,5 +32,10 @@ public class TypeConversion {
         double ans = x + y + z + l;
         System.out.println("Respectively Assign Value : "+ (int)ans);
 
+        // example 
+        byte s =10;
+        s =(byte) (s*2);
+        System.out.println("int to byte : "+s);
+
     }
 }
