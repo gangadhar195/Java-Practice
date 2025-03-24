@@ -8,7 +8,8 @@ public class Conditions {
         int b=++a;
         int c =a++;
         //  c += a;
-         a+=b;
+        b+=c;
+        //  a+=b;
         System.out.println( "A is : "+a);
         System.out.println( "B is : "+b);
         System.out.println( "C is : "+c);
