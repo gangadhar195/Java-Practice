@@ -7,6 +7,7 @@ public class Conditions {
         int a= 10;
         int b=++a;
         int c =a++;
+         c += a;
         System.out.println( "A is : "+a);
         System.out.println( "B is : "+b);
         System.out.println( "C is : "+c);
