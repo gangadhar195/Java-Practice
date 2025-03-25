@@ -29,6 +29,23 @@ public class Quandrans{
         }
       int r = (x>y)?x:y;
       System.out.println("Grater is : "+r);
+      System.out.print("Enter the Day : ");
+      String day = sc.next();
+      switch(day){
+        case"monday":
+        case"Tuesday":
+        case"Wednesday":
+        case"Thursday":
+        case"Friday":
+                System.out.println("Weekday");
+                break;
+        case"Saturday":
+        case"Sunday":
+        System.out.println("Holiday");
+        break;
+        default:
+        System.out.println("Invalid Input");
+      }
         sc.close();
     }
     
