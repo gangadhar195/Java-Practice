@@ -27,6 +27,8 @@ public class Quandrans{
 
             }
         }
+      int r = (x>y)?x:y;
+      System.out.println("Grater is : "+r);
         sc.close();
     }
     
