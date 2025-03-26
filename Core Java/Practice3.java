@@ -25,33 +25,41 @@ public class Practice3 {
         // }
 
         // Question Three
-        System.out.print("Enter the Week Number : ");
-        int w = sc.nextInt();
+        // System.out.print("Enter the Week Number : ");
+        // int w = sc.nextInt();
 
-        switch (w) {
-            case 1:
-                System.out.println("Sunday");
-                break;
-            case 2:
-                System.out.println("Monday");
-                break;
-            case 3:
-                System.out.println("Tuesday");
-                break;
-            case 4:
-                System.out.println("Wednesday");
-                break;
-            case 5:
-                System.out.println("Thursday");
-                break;
-            case 6:
-                System.out.println("Freiday");
-                break;
-            case 7:
-                System.out.println("Saturday");
-                break;
-            default:
-                    System.out.println("Invalid Input");
-        }
+        // switch (w) {
+        //     case 1:
+        //         System.out.println("Sunday");
+        //         break;
+        //     case 2:
+        //         System.out.println("Monday");
+        //         break;
+        //     case 3:
+        //         System.out.println("Tuesday");
+        //         break;
+        //     case 4:
+        //         System.out.println("Wednesday");
+        //         break;
+        //     case 5:
+        //         System.out.println("Thursday");
+        //         break;
+        //     case 6:
+        //         System.out.println("Freiday");
+        //         break;
+        //     case 7:
+        //         System.out.println("Saturday");
+        //         break;
+        //     default:
+        //             System.out.println("Invalid Input");
+        // }
+
+        //Question Four 
+        int a=63,  b=36;
+        boolean x = (a<b)?true:false;
+        int y=(a>b)?a:b;
+        System.out.println("X value is : "+x);
+        System.out.println("Y value is : "+y);
+
     }
 }
