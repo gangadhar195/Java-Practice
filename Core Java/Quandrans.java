@@ -32,7 +32,7 @@ public class Quandrans{
       System.out.print("Enter the Day : ");
       String day = sc.next();
       switch(day){
-        case"monday":
+        case"Monday":
         case"Tuesday":
         case"Wednesday":
         case"Thursday":
