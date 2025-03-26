@@ -62,26 +62,37 @@ public class Practice3 {
         // System.out.println("Y value is : "+y);
 
         // Question five
+        //one way
         System.out.print("Enter the Year : ");
         int year = sc.nextInt();
 
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
+        // if (year % 4 == 0) {
+        //     if (year % 100 == 0) {
 
-                if (year % 400 == 0) {
-                    System.out.println(year+" year is leap year");
-                }else {
-                    System.out.println(year+" year is not leap year");
+        //         if (year % 400 == 0) {
+        //             System.out.println(year+" year is leap year");
+        //         }else {
+        //             System.out.println(year+" year is not leap year");
         
-                }
-            }else {
-                System.out.println(year+" year is  leap year");
+        //         }
+        //     }else {
+        //         System.out.println(year+" year is  leap year");
     
-            }
-        } else {
-            System.out.println(year+" year is not leap year");
+        //     }
+        // } else {
+        //     System.out.println(year+" year is not leap year");
 
-        }
+        // }
 
+        boolean x = (year % 4)==0;
+        boolean y = (year % 100) != 0;
+        boolean z = ((year % 100) == 0 && (year % 400 )==0);
+        if(x && (y || z)){
+           System.out.println(year+" year is  leap year");
+
+        }else {
+                System.out.println(year+" year is not leap year");
+             }
+        
     }
 }
