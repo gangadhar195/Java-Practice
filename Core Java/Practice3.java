@@ -100,9 +100,9 @@ public class Practice3 {
 
         boolean x = (n % 2)==0;
         if(x == true){
-            System.out.println("Even Number");
+            System.out.println(n+" is Even Number");
         }else{
-            System.out.println("Odd Number");
+            System.out.println(n+" is Odd Number");
         }
         
     }
