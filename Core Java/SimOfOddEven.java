@@ -2,7 +2,7 @@ import java.util.*;
 public class SimOfOddEven {
     public static void main(String args[]){
     Scanner sc= new Scanner(System.in);
-
+System.out.println("Enter the No:");
     int n = sc.nextInt();
 
     // int even=0;
@@ -28,19 +28,28 @@ public class SimOfOddEven {
         // System.out.println("Factorial is : "+fact );
 
         //Questions 3 
-int p=0;
-        for(int i=1;i<=n;i++){
-            if(n%i==0){
-                p++;
-            }
+// int p=0;
+//         for(int i=1;i<=n;i++){
+//             if(n%i==0){
+//                 p++;
+//             }
         
-        }
-        if(p==2){
-            System.out.println("Number is Prime");
-        }
-        else{
-            System.out.println("Number is Not Prime");
+//         }
+//         if(p==2){
+//             System.out.println("Number is Prime");
+//         }
+//         else{
+//             System.out.println("Number is Not Prime");
 
+//         }
+
+//Question 4
+
+        System.out.println("Enter the power : ");
+        int p=sc.nextInt();
+        for(int i=2;i<=p;i++){
+            n*=i;
         }
+        System.out.println("Power of "+n);
     }
 }
