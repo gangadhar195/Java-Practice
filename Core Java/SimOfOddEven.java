@@ -69,16 +69,24 @@ public class SimOfOddEven {
         // }
         // System.out.println("Sum of Natural No : "+n+" is "+sum);
 
-        //swap no does not using third variable
+        // //swap no does not using third variable
+        // int a=10,b=20;
+        // System.out.println("Before Swap a:"+a );
+        // System.out.println("Before Swap b:"+b );
+        // a=a+b;
+        // b=a-b;
+        // a=a-b;
+        // System.out.println("After Swap a:"+a );
+        // System.out.println("After Swap b:"+b );
+
+     // //swap no does not using operator
         int a=10,b=20;
         System.out.println("Before Swap a:"+a );
         System.out.println("Before Swap b:"+b );
-        a=a+b;
-        b=a-b;
-        a=a-b;
+        a=a^b;
+        b=a^b;
+        a=a^b;
         System.out.println("After Swap a:"+a );
         System.out.println("After Swap b:"+b );
-
-    
     }
 }
