@@ -2,7 +2,7 @@ import java.util.*;
 public class SimOfOddEven {
     public static void main(String args[]){
     Scanner sc= new Scanner(System.in);
-System.out.println("Enter the No:");
+System.out.print("Enter the No:");
     int n = sc.nextInt();
 
     // int even=0;
@@ -44,12 +44,18 @@ System.out.println("Enter the No:");
 //         }
 
 //Question 4
+// int po=0;
+       
+        // for(int i=1;i<=10;i++){
+        //    System.out.println(n*i);
+        // }
+        // System.out.println("Power of "+n);
 
-        System.out.println("Enter the power : ");
-        int p=sc.nextInt();
-        for(int i=2;i<=p;i++){
-            n*=i;
+        //Questions 5
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i;
         }
-        System.out.println("Power of "+n);
+        System.out.println("Sum of Natural No : "+n+" is "+sum);
     }
 }
