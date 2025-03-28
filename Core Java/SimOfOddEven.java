@@ -73,9 +73,9 @@ public class SimOfOddEven {
         int a=10,b=20;
         System.out.println("Before Swap a:"+a );
         System.out.println("Before Swap b:"+b );
-        a=b;
-        b=a;
-        // b=a;
+        a=a+b;
+        b=a-b;
+        a=a-b;
         System.out.println("After Swap a:"+a );
         System.out.println("After Swap b:"+b );
 
