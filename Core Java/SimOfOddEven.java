@@ -1,9 +1,10 @@
 import java.util.*;
 public class SimOfOddEven {
     public static void main(String args[]){
-    Scanner sc= new Scanner(System.in);
-System.out.print("Enter the No:");
-    int n = sc.nextInt();
+   
+     Scanner sc= new Scanner(System.in);
+// System.out.print("Enter the No:");
+//     int n = sc.nextInt();
 
     // int even=0;
     // int odd=0;
@@ -60,13 +61,24 @@ System.out.print("Enter the No:");
         // System.out.println("Sum of Natural No : "+n+" is "+sum);
 
         // sum of natural no using while loop
-        int sum=0;
-        int i=1;
-        while(i<=n){
-            sum +=i;
-            i++;
-        }
-        System.out.println("Sum of Natural No : "+n+" is "+sum);
+        // int sum=0;
+        // int i=1;
+        // while(i<=n){
+        //     sum +=i;
+        //     i++;
+        // }
+        // System.out.println("Sum of Natural No : "+n+" is "+sum);
+
+        //swap no does not using third variable
+        int a=10,b=20;
+        System.out.println("Before Swap a:"+a );
+        System.out.println("Before Swap b:"+b );
+        a=b;
+        b=a;
+        // b=a;
+        System.out.println("After Swap a:"+a );
+        System.out.println("After Swap b:"+b );
+
     
     }
 }
