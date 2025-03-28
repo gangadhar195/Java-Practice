@@ -52,10 +52,21 @@ System.out.print("Enter the No:");
         // System.out.println("Power of "+n);
 
         //Questions 5
+        // sum of natural no using for loop
+        // int sum=0;
+        // for(int i=1;i<=n;i++){
+        //     sum+=i;
+        // }
+        // System.out.println("Sum of Natural No : "+n+" is "+sum);
+
+        // sum of natural no using while loop
         int sum=0;
-        for(int i=1;i<=n;i++){
-            sum+=i;
+        int i=1;
+        while(i<=n){
+            sum +=i;
+            i++;
         }
         System.out.println("Sum of Natural No : "+n+" is "+sum);
+    
     }
 }
