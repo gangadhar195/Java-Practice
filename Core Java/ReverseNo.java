@@ -12,8 +12,9 @@ public class ReverseNo {
         while (n>0) {
             lastno = n%10;
             rev = (rev*10)+lastno;
-            System.out.println(rev);
             n=n/10;
         }
+        System.out.println(rev);
+
     }
 }
