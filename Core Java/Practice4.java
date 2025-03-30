@@ -15,15 +15,39 @@ public class Practice4 {
         // }
 
         //Questions 2 invert and rotated half pyramid 
-        int n=4;
+        // int n=4;
+        // for(int i=1;i<=n;i++){
+        //     for(int j=1;j<=n-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int j=1;j<=i;j++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
+
+        // //Questions 3 invert half pyramid with number pattern
+        // int n=5;
+        // for(int i=1;i<=n;i++){
+        //     for(int j=1;j<=n-i +1;j++){
+        //         System.out.print(j);
+        //         System.out.print(" ");
+        //     }
+        //     System.out.println();
+        // }
+
+        //Questions 4 Floyd's Triangle pattern
+        int n=5;
+        int j=0;
+        int k=1;
         for(int i=1;i<=n;i++){
-            for(int j=1;j<=n-i;j++){
-                System.out.print(" ");
-            }
-            for(int j=1;j<=i;j++){
-                System.out.print("*");
+            for( j=1;j<=i;j++){
+                System.out.print(k + " ");
+            k++;
+
             }
             System.out.println();
         }
+        
     }
 }
