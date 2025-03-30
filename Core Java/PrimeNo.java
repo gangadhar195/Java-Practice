@@ -18,23 +18,44 @@ public class PrimeNo {
         //     System.out.println("Prime No ");
 
         //prime no 2
-        boolean Prime = true;
-        if(no==2){
-            System.out.println("Prime No ");
+        // boolean Prime = true;
+        // if(no==2){
+        //     System.out.println("Prime No ");
 
-        }
-        else{
-            for(int i=2;i<Math.sqrt(no);i++){
-                if(no%i==0){
-                    Prime=false;
+        // }
+        // else{
+        //     for(int i=2;i<Math.sqrt(no);i++){
+        //         if(no%i==0){
+        //             Prime=false;
+        //         }
+        //     }
+        //     if(Prime==true){
+        //         System.out.println("Prime No");
+        //     }else{
+        //         System.out.println("Not a Prime No");
+        //     }
+        // }
+
+        //Prime No 3
+
+        int fact=0;
+        if(no==2){
+            System.out.println("Prime No");
+        }else{
+            for(int i=1;i<Math.sqrt(no);i++)
+            {
+                if(no % i==0){
+                    fact++;
                 }
             }
-            if(Prime==true){
+            if(fact==2){
                 System.out.println("Prime No");
-            }else{
+            }
+            else{
                 System.out.println("Not a Prime No");
             }
         }
+        
         
     }
 }
