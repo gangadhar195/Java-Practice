@@ -153,17 +153,33 @@ public class Practice4 {
         //     System.out.println();
         // }
 
-        //Question 10 Number pyramid pattern
-        int n=5;
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<n-i+1;j++){
-                System.out.print(" ");
+        // //Question 10 Number pyramid pattern
+        // int n=5;
+        // for(int i=1;i<=n;i++){
+        //     for(int j=1;j<n-i+1;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int j=1;j<=i;j++){
+        //         System.out.print(i+" ");
+        //     }
+        //     System.out.println();
+        // }
+
+         //Question 11 palindromic  pattern with numbers pattern
+         int n=5;
+         for(int i=1;i<=n;i++){
+             for(int j=1;j<n-i+1;j++){
+                 System.out.print(" ");
+             }
+             for(int j=i;j>=1;j--){
+                 System.out.print(j);
+                 
+             }
+             for(int j=2;j<=i;j++){
+                System.out.print(j);
             }
-            for(int j=1;j<=i;j++){
-                System.out.print(i+" ");
-            }
-            System.out.println();
-        }
+             System.out.println();
+         }
         
     }
 }
