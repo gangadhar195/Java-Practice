@@ -14,7 +14,7 @@ public class Strings {
         System.out.println(str3.charAt(4));
         System.out.println(str3.toLowerCase());
         System.out.println(str3.toUpperCase());
-        
+        System.out.println(str3.indexOf("r", 0));
 
 
 
