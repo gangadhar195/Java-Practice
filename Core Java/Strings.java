@@ -12,6 +12,8 @@ public class Strings {
         System.out.println(str3.trim());
         System.out.println(str3.substring(0,5));
         System.out.println(str3.charAt(4));
+        System.out.println(str3.toLowerCase());
+        System.out.println(str3.toUpperCase());
         
 
 
