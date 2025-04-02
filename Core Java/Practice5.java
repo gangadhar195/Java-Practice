@@ -17,7 +17,14 @@ public class Practice5 {
         }
         return fact;
     }
-public static 
+    public static int binCoeff(int n,int r){
+    int n_fact =Factorial(n);
+    int r_fact =Factorial(r);
+    int rcn_fact =Factorial(n-r);
+
+    int biocoff = n_fact/(r_fact*rcn_fact);
+    return biocoff;
+}
     public static void main(String args[]){
 
     //     int n=124;
@@ -28,15 +35,8 @@ public static
     //     else{
     //         System.out.println("Not Palindrome : "+n);
     //     }
-        int n=5;
-        int r=2;
+       int result=  binCoeff(5, 2);
 
-        int n_fact =Factorial(n);
-        int r_fact =Factorial(r);
-        int rcn_fact =Factorial(n-r);
-
-        int biocoff = n_fact/(r_fact*rcn_fact);
-        System.out.println(biocoff);
-
+    System.out.println("Bin Coeff : "+ result);
     }
 }
