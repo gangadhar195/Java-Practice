@@ -167,27 +167,41 @@ public class Pattrens {
     // }
     //14.Diamond Pattern
 
-    int n=4;
-    //upper shape of diamond
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n-i;j++){
-            System.out.print(" ");
+//     int n=4;
+//     //upper shape of diamond
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=n-i;j++){
+//             System.out.print(" ");
+//         }
+//         for(int j=1;j<=2*i-1;j++){
+//             System.out.print("*");
+//         }
+//         System.out.println();
+//     }
+//     //Lower Shape of diamond
+//     for(int i=n;i>=1;i--){
+//         for(int j=1;j<=n-i;j++){
+//             System.out.print(" ");
+//         }
+//         for(int j=1;j<=2*i-1;j++){
+//             System.out.print("*");
+//         }
+//         System.out.println();
+//     }
+
+        int row=5;
+        // int n=1;
+        for(int i=1;i<=row;i++){
+            for(int j=1;j<=i;j++){
+                int n =i+j;
+                if(n%2==0){
+                    System.out.print("1");
+                }else{
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
         }
-        for(int j=1;j<=2*i-1;j++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-    //Lower Shape of diamond
-    for(int i=n;i>=1;i--){
-        for(int j=1;j<=n-i;j++){
-            System.out.print(" ");
-        }
-        for(int j=1;j<=2*i-1;j++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
     }
 
 }
