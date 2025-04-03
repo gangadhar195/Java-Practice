@@ -30,11 +30,21 @@ public class Practice5 {
 //    int avg = a+b+c/3;
 //     return avg;
 // }
-    public static boolean isPrime(int n){
-        if(n%2==0){
-            return true;
+    // public static boolean isPrime(int n){
+    //     if(n%2==0){
+    //         return true;
+    //     }
+    // return false;
+    // }
+
+    public static int sumofDigit(int n){
+        int sum=0;
+        while(n>0){
+            int last = n%10;
+            sum+=last;
+            n=n/10;
         }
-    return false;
+        return sum;
     }
 public static void main(String args[]){
 
@@ -57,13 +67,16 @@ public static void main(String args[]){
 //    System.out.println("Average of three Number is : "+avg);
 
 //is Prime or Not 
-    boolean isPrimeN = isPrime(8);
-    if(isPrimeN){
-        System.out.println("Even : "+isPrimeN);
-    }
-    else{
-        System.out.println("Not Even");
-    }
+    // boolean isPrimeN = isPrime(8);
+    // if(isPrimeN){
+    //     System.out.println("Even : "+isPrimeN);
+    // }
+    // else{
+    //     System.out.println("Not Even");
+    // }
+    int n=848;
+   int sum= sumofDigit(n);
+   System.out.println("Sum of Digit "+n+" is : "+sum);
 
     }
 }
