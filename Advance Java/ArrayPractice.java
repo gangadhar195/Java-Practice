@@ -10,6 +10,9 @@ public class ArrayPractice {
             for(int j=4;j<4-i+1;j++){
                 System.out.print(" ");
             }
+            for(int j=4;j<4-i+1;j++){
+                System.out.print("*");
+            }
             
             System.out.println();
         }
