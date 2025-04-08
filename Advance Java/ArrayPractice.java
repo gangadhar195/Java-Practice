@@ -8,7 +8,6 @@ public class ArrayPractice {
             
         }
         
-            System.out.println("Not found ");
         
     }
     public static void main(String args[]){
