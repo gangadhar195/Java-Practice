@@ -25,5 +25,6 @@ public class Strings {
     String str2="Word";
     boolean result = str1.equals(str2);
     System.out.println(result);
+    System.out.println(str1.hashCode());
     }
 }
