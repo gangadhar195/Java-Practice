@@ -21,14 +21,22 @@ public class Strings {
     // }
     // System.out.println(System.currentTimeMillis()-StartTime);
 
-    String str1="Hello";
-    String str2="Word";
-    boolean result = str1.equals(str2);
-    System.out.println(result);
-    System.out.println(str1.hashCode());
-    String str = str1.replace("l", "R");
-    String str3 = str1.intern();
-    System.out.println(str);
-    System.out.println(str3);
+    // String str1="Hello";
+    // String str2="Word";
+    // boolean result = str1.equals(str2);
+    // System.out.println(result);
+    // System.out.println(str1.hashCode());
+    // String str = str1.replace("l", "R");
+    // String str3 = str1.intern();
+    // System.out.println(str);
+    // System.out.println(str3);
+    // System.out.println(str1.charAt(3));
+
+    String str1="yash";
+    String str2="shya";
+    char []ch1=str1.toCharArray();
+    char []ch2=str2.toCharArray();
+    Array.sort();
+
     }
 }
