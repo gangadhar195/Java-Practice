@@ -26,5 +26,6 @@ public class Strings {
     boolean result = str1.equals(str2);
     System.out.println(result);
     System.out.println(str1.hashCode());
+    String str = str1.replace("l", "R")
     }
 }
