@@ -41,9 +41,12 @@ public class Strings {
         int idx = ch -'a';
         ch1[idx]++;
     }
-
-
-    // Array.sort();
-
+    for(int j=0;j<str2.length();j++){
+        char ch22 =str2.charAt(j);
+        int idx1 = ch22-'a';
+        ch2[idx1]++;
+    }
+        boolean result = Arrays.equals(ch1,ch2);
+        System.out.println(result);
     }
 }
