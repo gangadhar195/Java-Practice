@@ -1,6 +1,23 @@
+import java.util.Arrays;
+
 public class Strings {
+static boolean CheckAnagram(String str1,String str2){
+int ch1[]= new int[26];
+    int ch2[]= new int[26];
+    for(int i=0;i<str1.length();i++){
+        char ch =str1.charAt(i);
+        int idx = ch -'a';
+        ch1[idx]++;
+    }
+    for(int j=0;j<str2.length();j++){
+        char ch22 =str2.charAt(j);
+        int idx1 = ch22-'a';
+        ch2[idx1]++;
+    }
+    return Arrays.equals(ch1, ch2);
+}
     public static void main(String args[]){
-        long StartTime = System.currentTimeMillis();
+        // long StartTime = System.currentTimeMillis();
     //     StringBuffer buffer = new StringBuffer("Hello");
     //     buffer.append(" World");
     //     // buffer.delete(2, 3);
@@ -34,19 +51,8 @@ public class Strings {
 
     String str1="yash";
     String str2="shya";
-    int ch1[]= new int[26];
-    int ch2[]= new int[26];
-    for(int i=0;i<str1.length();i++){
-        char ch =str1.charAt(i);
-        int idx = ch -'a';
-        ch1[idx]++;
-    }
-    for(int j=0;j<str2.length();j++){
-        char ch22 =str2.charAt(j);
-        int idx1 = ch22-'a';
-        ch2[idx1]++;
-    }
-        boolean result = Arrays.equals(ch1,ch2);
-        System.out.println(result);
+    
+        boolean result = CheckAnagram(str1,str2);
+        System.out.println("Result is : "+result);
     }
 }
