@@ -34,9 +34,16 @@ public class Strings {
 
     String str1="yash";
     String str2="shya";
-    char []ch1=str1.toCharArray();
-    char []ch2=str2.toCharArray();
-    Array.sort();
+    int ch1[]= new int[26];
+    int ch2[]= new int[26];
+    for(int i=0;i<str1.length();i++){
+        char ch =str1.charAt(i);
+        int idx = ch -'a';
+        ch1[idx]++;
+    }
+
+
+    // Array.sort();
 
     }
 }
