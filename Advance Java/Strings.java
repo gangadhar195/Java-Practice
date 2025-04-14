@@ -51,6 +51,8 @@ int ch1[]= new int[26];
 
     String str1="yash";
     String str2="shya";
+    String wel ="Welcome";
+    String h = "To Home";
     
         boolean result = CheckAnagram(str1,str2);
         System.out.println("Result is : "+result);
