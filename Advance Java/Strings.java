@@ -52,11 +52,11 @@ int ch1[]= new int[26];
     String str1="yash";
     String str2="shya";
     String wel ="Welcome";
-    String h = "To Home";
+    String h = "To Home Gangadhar";
     
         boolean result = CheckAnagram(str1,str2);
         String message = wel.concat(h);
         System.out.println("Result is : "+result);
-        System.out.println();
+        System.out.println(message);
     }
 }
