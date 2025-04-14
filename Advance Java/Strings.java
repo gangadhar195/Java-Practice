@@ -55,6 +55,8 @@ int ch1[]= new int[26];
     String h = "To Home";
     
         boolean result = CheckAnagram(str1,str2);
+        String message = wel.concat(h);
         System.out.println("Result is : "+result);
+        System.out.println();
     }
 }
