@@ -49,14 +49,20 @@ int ch1[]= new int[26];
     // System.out.println(str3);
     // System.out.println(str1.charAt(3));
 
-    String str1="yash";
-    String str2="shya";
-    String wel ="Welcome";
-    String h = "To Home Gangadhar";
+    // String str1="yash";
+    // String str2="shya";
+    // String wel ="Welcome";
+    // String h = " To Home Gangadhar";
     
-        boolean result = CheckAnagram(str1,str2);
-        String message = wel.concat(h);
-        System.out.println("Result is : "+result);
-        System.out.println(message);
+    //     boolean result = CheckAnagram(str1,str2);
+    //     String message = wel.concat(h);
+    //     System.out.println("Result is : "+result);
+    //     System.out.println(message);
+    //String Imutable
+
+        String name="Gangadher";
+        System.out.println(name+"Hascode : "+name.hashCode());
+        name="Rama";
+        System.out.println(name.hashCode());
     }
 }
