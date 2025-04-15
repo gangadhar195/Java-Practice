@@ -61,12 +61,14 @@ int ch1[]= new int[26];
     //String Imutable
 
         String name="Gangadher";
-        System.out.println(name+"before Hascode : "+name.hashCode());
+        System.out.println("Regular string : ");
+        System.out.println(name+" before Hascode : "+name.hashCode());
         name="Rama";
         System.out.println(name+" after HashCode : "+name.hashCode());
 
-        StringBuilder builder= new StringBuilder("gangadhar");
-        System.out.println(builder +"before Hashcode : "+builder.hashCode());
+        StringBuilder builder= new StringBuilder("Gangadhar");
+        System.out.println("StringBuilder : ");
+        System.out.println(builder +" before Hashcode : "+builder.hashCode());
         builder.append("Rama");
         System.out.println(builder +"after Hashcode : "+builder.hashCode());
 
