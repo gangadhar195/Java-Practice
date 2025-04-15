@@ -61,8 +61,11 @@ int ch1[]= new int[26];
     //String Imutable
 
         String name="Gangadher";
-        System.out.println(name+"Hascode : "+name.hashCode());
+        System.out.println(name+" Hascode : "+name.hashCode());
         name="Rama";
-        System.out.println(name.hashCode());
+        System.out.println(name+" HashCode : "+name.hashCode());
+
+        StringBuilder builder= new StringBuilder("gangadhar");
+        System.out.println(builder +" Hashcode : "+builder.hashCode());
     }
 }
