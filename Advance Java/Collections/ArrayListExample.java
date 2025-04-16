@@ -11,6 +11,12 @@ public class ArrayListExample {
          System.out.println(list);
          list.remove(2);
          list.add(0,"Ranna");
+        //  list.clear();
+         for(String Value : list){
+            System.out.println(Value);
+         }
+        //  list.add(0,"Tanaji");
+        // list.clone();
          for(String Value : list){
             System.out.println(Value);
          }
