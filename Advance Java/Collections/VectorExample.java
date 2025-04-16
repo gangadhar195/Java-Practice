@@ -8,7 +8,8 @@ public class VectorExample {
         vet.add("Filip Jey");
         System.out.println(vet.size());
         System.out.println(vet);
-        vet.remove(2);
+        // vet.remove(2);
+        vet.add(0,"Rey");
         for( String value:vet){
             System.out.println(value);
         }
