@@ -29,10 +29,16 @@ public class QueueExample {
     
     // add item using for loop
     Queue<Integer> que = new LinkedList<>();
+    System.out.println(que.size());
+
     for(int i=1;i<=10;i++){
         que.add(i);
     }
     System.out.println(que.size());
     System.out.println(que);
+    System.out.println(que.peek());
+    System.out.println(que.poll());
+    System.out.println(que);
+
     }
 }
