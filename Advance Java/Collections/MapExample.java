@@ -13,5 +13,14 @@ public class MapExample {
         for(Map.Entry<Integer, String> m : map.entrySet()){
             System.out.println(m.getKey() + " : "+ m.getValue());
         }
+        System.out.println(map.size());
+        System.out.println(map.get(101));
+        System.out.println(map.keySet());
+        System.out.println(map.values());
+        System.out.println(map.entrySet());
+        System.out.println(map.remove(103));
+        System.out.println(map.entrySet());
+        System.out.println(map.size());
+
     }
 }
