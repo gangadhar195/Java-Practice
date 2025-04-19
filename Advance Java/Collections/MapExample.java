@@ -52,7 +52,9 @@ public class MapExample {
         System.gc();
         System.out.println(weak);
 
-        weak.remove(1);
+        weak.remove("Two");
+        System.out.println(weak);
+        weak.put("Five", 5);
         System.out.println(weak);
 
     }
