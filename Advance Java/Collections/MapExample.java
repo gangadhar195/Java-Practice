@@ -56,6 +56,10 @@ public class MapExample {
         System.out.println(weak);
         weak.put("Five", 5);
         System.out.println(weak);
+        String six = "Six";
+        Integer SixNum = 6;
+        weak.put(six, SixNum);
+        System.out.println(weak);
 
     }
 }
