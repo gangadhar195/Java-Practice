@@ -5,7 +5,7 @@ public class WaterCapacity {
         int n=8;
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
-                
+                System.out.print(i+j+"\t");
             }
         }
 
