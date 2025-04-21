@@ -7,5 +7,7 @@ public class SortedMapExample {
         number.put("One", 1);
         number.put("Two", 2);
         System.out.println(number);
+        System.out.println(number.remove(1));
+        System.out.println(number);
     }
 }
