@@ -1,7 +1,10 @@
 public class MergeSort {
 
     public static int Merge(int a1[],int a2[]){
-        
+            int n = a1.length + a2.length;
+                for(int i =0;i<n;i++){
+                    
+                }
         return 0;
     }
     public static void main(String args[]){
