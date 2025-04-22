@@ -1,8 +1,10 @@
 public class MergeSort {
 
     public static int Merge(int a1[],int a2[]){
-            int n = a1.length + a2.length;
-                for(int i =0;i<n;i++){
+            int n1 = a1.length, n2=a2.length;
+                int a3[] = new int[n1+n2];
+                int p1=0,p2=0;
+                for(int i =0;i<a3.length;i++){
                     
                 }
         return 0;
