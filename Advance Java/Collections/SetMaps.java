@@ -12,6 +12,8 @@ public class SetMaps {
         set1.add(300);
         set1.add(400);
         System.out.println(set1);
+        set1.remove(200);
+        System.out.println(set1);
 
     }
 }
