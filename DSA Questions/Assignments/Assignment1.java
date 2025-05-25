@@ -1,20 +1,20 @@
 package Assignments;
 
 public class Assignment1 {
-    public static void PrintNums(int nums[]){
+    public static boolean PrintNums(int nums[]){
         int n=nums.length;
         for(int i=0;i<n;i++){
-            if(nums[i]==nums[i+1]){
-                System.out.println(true);
-                break;
-            }
-            else{
-                System.out.println(false);
+            for(int j=i+1;j<n;j++){
+            if(nums[i]==nums[j]){
+                return true;
             }
         }
+        }
+            return false;
     }
     public static void main(String args[]){
-        int nums[] = {1,2,3,1};
-        PrintNums(nums);
+        int nums[] = {1,2,3,5};
+        // PrintNums(nums);
+        System.out.println(PrintNums(nums));
     }
 }
