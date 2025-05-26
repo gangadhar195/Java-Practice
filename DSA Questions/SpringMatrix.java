@@ -11,6 +11,9 @@ public class SpringMatrix {
             }
             //rightcol
             for(int i=startRow+1;i<=endRow;i++){
+                if(startRow==endRow){
+                    break;
+                }
                 System.out.print(matrix[i][endCol]+" ");
             }
             //bottom
@@ -19,6 +22,9 @@ public class SpringMatrix {
             }
             //startcol
             for(int i=endRow-1;i>=startRow+1;i--){
+                if(startCol==endCol){
+                    break;
+                }
                 System.out.print(matrix[i][startCol]+" ");
             }
             startCol++;
