@@ -3,16 +3,23 @@ public class DiagonalMatrixSum {
         int sum=0;
             System.out.println("Matrix Length : "+Matrix.length);
             System.out.println("Matrix Length 0 : "+Matrix[0].length);
+        //Time Complexcity log(n2)
+        // for(int i=0;i<Matrix.length;i++){
+        //     for(int j=0;j<Matrix[0].length;j++){
 
+        //         if(i==j){
+        //             sum+=Matrix[i][j];
+        //         }
+        //         else if(i+j==Matrix.length-1){
+        //             sum+=Matrix[i][j];
+        //         }
+        //     }
+        // }
+        // return sum;
         for(int i=0;i<Matrix.length;i++){
-            for(int j=0;j<Matrix[0].length;j++){
-
-                if(i==j){
-                    sum+=Matrix[i][j];
-                }
-                else if(i+j==Matrix.length-1){
-                    sum+=Matrix[i][j];
-                }
+            sum+=Matrix[i][i];
+            if(i!=Matrix.length-i-1){
+                sum+=Matrix[i][Matrix.length-1-i];
             }
         }
         return sum;
