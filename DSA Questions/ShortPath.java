@@ -21,7 +21,7 @@ public class ShortPath {
         return (float)Math.sqrt(X2 + Y2);
     }
     public static void main(String args[]){
-        String str = "NSEWWESMM";
+        String str = "NS";
         // FindShortestPath(str);
         System.out.println(FindShortestPath(str));
     }
