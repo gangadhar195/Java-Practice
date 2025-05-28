@@ -3,13 +3,13 @@ public class ShortPath {
         int x=0,y=0;
         for(int i=0;i<str.length();i++){
             char dir = str.charAt(i);
-            if(dir=="N"){
+            if(dir == 'N'){
                 y++;
             }
-            else if(dir=="W"){
+            else if(dir=='W'){
                 x--;
             }
-            else if(dir=="S"){
+            else if(dir=='S'){
                 y--;
             }
             else{
