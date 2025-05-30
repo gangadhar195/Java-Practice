@@ -16,6 +16,23 @@ public class StringBuilderMethod {
         }
         return sb.toString();
     }
+
+    public static void compress(String str){
+        StringBuilder newstr = new StringBuilder("");
+        for(int i=0;i<str.length();i++){
+        Integer count =1;
+
+            while (i<str.length()-1 && str.charAt(i)==str.charAt(i+1)) {
+                count++;
+                i++;
+            }
+            newstr.append(str.charAt(i));
+            if(count>1){
+                newstr.append(count.toString());
+            }
+        }
+        System.out.println(newstr);
+    }
     public static void main(String args[]){
         // StringBuilder str = new StringBuilder("");
         // for(char i='a';i<='z';i++){
@@ -24,9 +41,11 @@ public class StringBuilderMethod {
         // System.out.println(str);
         // System.out.println(str.length());
 
-        String str = " hi i am gangadhar";
+        // String str = " hi i am gangadhar";
         // toUpperCase(str);
 
-        System.out.println(toUpperCase(str));
+        // System.out.println(toUpperCase(str));
+        String str = "aabbcdd";
+        compress(str);
  }
 }
