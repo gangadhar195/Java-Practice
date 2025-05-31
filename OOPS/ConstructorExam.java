@@ -31,10 +31,21 @@ class Student{
     int roll;
     String pass;
     int mark[] = new int[3];
+    //shallow copy
+    // Student(Student s1){
+    //     this.name=s1.name;
+    //     this.roll=s1.roll;
+    //     this.mark=s1.mark;
+    // }
+
+        //deep copy
     Student(Student s1){
+        mark = new int[3];
         this.name=s1.name;
         this.roll=s1.roll;
-        this.mark=s1.mark;
+        for(int i=0;i<mark.length;i++){
+            this.mark[i]=s1.mark[i];
+        }
     }
     Student(){
         System.out.println("Constructor is called..");
