@@ -15,10 +15,15 @@ public class Inheritance {
         // p.papy();
 
         //Hirarchical inheritance
-        Lion l=new Lion();
-        l.Eats();
-        Fish f = new Fish();
-        f.Eats();
+        // Lion l=new Lion();
+        // l.Eats();
+        // Fish f = new Fish();
+        // f.Eats();
+
+        //Hybride 
+        KingOfForest kf = new KingOfForest();
+        kf.EatsLion();
+        kf.Jungle();
 
     }
 }
@@ -63,5 +68,10 @@ void EatsFish(){
  class Lion extends Animal{
  void EatsLion(){
         System.out.println("live in Land");
+    }
+ }
+ class KingOfForest extends Lion{
+    void Jungle(){
+    System.out.println("King of Jumgle");
     }
  }
