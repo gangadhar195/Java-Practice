@@ -2,7 +2,8 @@ package OOPS;
 
 public class InterfaceClass {
     public static void main(String args[]){
-
+        Queen q = new Queen();
+        q.move();
     }
 }
   interface ChessPlayer {
