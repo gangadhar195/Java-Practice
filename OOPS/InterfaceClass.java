@@ -4,6 +4,9 @@ public class InterfaceClass {
     public static void main(String args[]){
         Queen q = new Queen();
         q.move();
+        Child c = new Child();
+        c.FName();
+        c.MName();
     }
 }
   interface ChessPlayer {
@@ -25,5 +28,21 @@ public class InterfaceClass {
     public void move(){
             System.out.println("up,down,left,right,diagonal(by 1 step)");
 
+    }
+ }
+
+  interface Father {
+    
+    public void FName();
+ }
+  interface Mother {
+    public void MName();
+ }
+ class Child implements Father,Mother{
+    public void FName(){
+        System.out.println("Father name:");
+    }
+    public void MName(){
+        System.out.println("Mother name:");
     }
  }
