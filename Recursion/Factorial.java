@@ -9,7 +9,7 @@ public class Factorial {
         // }
 
         if(n>0){
-            return n*Fact(n-1);
+            return n * Fact(n-1);
         }else{
             return 1;
         }
