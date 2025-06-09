@@ -10,6 +10,6 @@ public class TillingProblem {
             return totalways;
         }
     public static void main(String args[]){
-        System.out.println(tillingProblems(4));
+        System.out.println(tillingProblems(10));
     }
 }
