@@ -11,6 +11,6 @@ public class BinaryStrProblem {
         }
     }
     public static void main(String args[]){
-        OnesConsecutives(3, "", 0);
+        OnesConsecutives(4, "", 0);
     }
 }
