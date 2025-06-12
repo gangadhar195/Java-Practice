@@ -15,11 +15,11 @@ public class MergeSort {
         int k=0;
         while(i<=mid && j<=ei){
             if(arr[i]<arr[j]){
-                arr[i]=temp[i];
+                temp[k]=arr[i];
                 i++;
             }
             else{
-                arr[j]=temp[j];
+                temp[k]=arr[j];
                 j++;
             }
             k++;
@@ -30,7 +30,7 @@ public class MergeSort {
         while(j<=ei){
             temp[k++]=arr[j++];
         }
-        for(i=0,i=si;k<arr.length;k++,i++){
+        for(k=0,i=si;k<temp.length;k++,i++){
             arr[i]=temp[k];
         }
     }
@@ -42,8 +42,10 @@ public class MergeSort {
     }
     public static void main(String args[]){
         int arr[] = {2,5,1,6,4,8};
-        int si=arr[0];
-        int ei = arr.length;
-        Printmergesort(arr,si,ei);
+        // int si=arr[0];
+        // int ei = arr.length;
+        Printmergesort(arr,0,arr.length-1);
+        PrintArr(arr);
+
     }
 }
