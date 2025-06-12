@@ -25,14 +25,20 @@ public class MergeSort {
             k++;
         }
         while(i<=mid){
-            arr[k++]=temp[i++];
+            temp[k++]=arr[i++];
         }
         while(j<=ei){
-            arr[k++]=temp[j++];
+            temp[k++]=arr[j++];
         }
-        for(k=0,i=i;arr.length;k++,i++){
-
+        for(i=0,i=si;k<arr.length;k++,i++){
+            arr[i]=temp[k];
         }
+    }
+    public static void PrintArr(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
     }
     public static void main(String args[]){
         int arr[] = {2,5,1,6,4,8};
