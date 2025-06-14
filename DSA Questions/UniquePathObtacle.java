@@ -1,5 +1,4 @@
-public class UniquePaths {
-
+public class UniquePathObtacle {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length;
         int n = obstacleGrid[0].length;
@@ -40,13 +39,5 @@ public class UniquePaths {
         dp[x][y] = right + down;
 
         return dp[x][y];
-    }
-    public static void main(String args[]){
-            int[][] obstacleGrid = {
-                {0,0,0},
-                {0,1,0},
-                {0,0,0}
-            };
-            uniquePathsWithObstacles(obstacleGrid);
     }
 }
