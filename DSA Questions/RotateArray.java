@@ -34,11 +34,21 @@ public class RotateArray {
         }
     }
 
+    public static int searchtwo(int arr[],int tar){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==tar){
+                return i;
+            }
+        }
+        return -1;
+    }
     public static void main(String args[]){
     int arr[] = {2,4,6,8,9,1,5};
-    int tar = 1;
-   int tarIdx= search(arr,tar,0,arr.length-1);
-   System.out.println(tarIdx);
+    int tar = 0;
+//    int tarIdx= search(arr,tar,0,arr.length-1);
+//    System.out.println(tarIdx);
+       int idx= searchtwo(arr,tar);
+       System.out.println(idx);
 
     }
 }
