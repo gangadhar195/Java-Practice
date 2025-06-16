@@ -139,3 +139,44 @@ class Solution {
         return Math.max(rob_house_1, rob_house_end);
     }
 }
+
+/// 329 leetcode house robber 2
+
+class Solution {
+    static int rec(TreeNode curr, HashMap<TreeNode, Integer> dp) {
+        if (curr == null) {
+            return 0;
+        }
+
+        if (dp.containsKey(curr) == true) // dp[i]!=-1
+        {
+            return dp.get(curr);
+        }
+
+        int take = curr.val;
+
+        if (curr.left != null) {
+            take += rec(curr.left.left, dp) + rec(curr.left.right, dp);
+        }
+        if (curr.right != null) {
+            take += rec(curr.right.left, dp) + rec(curr.right.right, dp);
+        }
+
+        int notTake = rec(curr.left, dp) + rec(curr.right, dp);
+
+        int ans = Math.max(take, notTake);
+
+        dp.put(curr, ans);
+
+        return ans;
+
+    }
+
+    public int rob(TreeNode root) {
+        // dp[curr] = value
+        // treenode -> integer ans
+        HashMap<TreeNode, Integer> dp = new HashMap<>();
+
+        return rec(root, dp);
+    }
+}

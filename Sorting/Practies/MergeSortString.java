@@ -45,14 +45,14 @@ public class MergeSortString {
         return arr3;
     }
 
-    public static boolean isAlphabeticaly(String str1,String str2){
+    public static boolean isAlphabeticaly(String arr1,String arr2){
         if(str1.compareTo(str2)<0){
             return true;
         }
         return false;
     }
     public static void main(String args[]){
-        String[] fruits={"mango","banana","apple","orange"};
+        String[] fruits={"mango","banana","apple","orange","aj"};
        String[] a= mergesort(fruits,0,fruits.length-1);
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]+" ");
