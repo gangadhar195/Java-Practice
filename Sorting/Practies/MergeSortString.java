@@ -46,7 +46,7 @@ public class MergeSortString {
     }
 
     public static boolean isAlphabeticaly(String arr1,String arr2){
-        if(str1.compareTo(str2)<0){
+        if(arr1.compareTo(arr2)<0){
             return true;
         }
         return false;
