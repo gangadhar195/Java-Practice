@@ -22,19 +22,22 @@ public class nQueens {
         }
         return true;
     }
-    public static void nqueens(char board[][],int row){
+    public static boolean nqueens(char board[][],int row){
         if(row==board.length){
             // printCahr(board);
             count++;
-            return;
+            return true;
         }
         for(int i=0;i<board.length;i++){
             if(isSafe(board,row,i)){
             board[row][i]='Q';
-            nqueens(board, row+1);
+           if(nqueens(board, row+1)){
+            return true;
+           }
             board[row][i]='X';
             }
         }
+        return false;
     }
 
     public static void printCahr(char board[][]){
@@ -48,14 +51,17 @@ public class nQueens {
     }
      public static int count=0;
     public static void main(String args[]){
-        int n=5;
+        int n=4;
         char board[][] = new char[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 board[i][j]='X';
             }
         }
-        nqueens(board,0);
+        if(nqueens(board,0)){
+            System.out.println("Solution is possible : ");
+            printCahr(board);
+        }
         System.out.println("No are ways to print Queen: "+count);
     }
 }
