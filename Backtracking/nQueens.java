@@ -15,7 +15,7 @@ public class nQueens {
             }
         }
         //daigonal right up
-        for(int i=row-1,j=col+1;i>=0 && j<=board.length;i--,j++){
+        for(int i=row-1,j=col+1;i>=0 && j<board.length;i--,j++){
             if(board[i][j]=='Q'){
                 return false;
             }
@@ -24,7 +24,8 @@ public class nQueens {
     }
     public static void nqueens(char board[][],int row){
         if(row==board.length){
-            printCahr(board);
+            // printCahr(board);
+            count++;
             return;
         }
         for(int i=0;i<board.length;i++){
@@ -45,14 +46,16 @@ public class nQueens {
             System.out.println();
         }
     }
+     public static int count=0;
     public static void main(String args[]){
-        int n=2;
+        int n=5;
         char board[][] = new char[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                board[i][j]='.';
+                board[i][j]='X';
             }
         }
         nqueens(board,0);
+        System.out.println("No are ways to print Queen: "+count);
     }
 }
