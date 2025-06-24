@@ -12,7 +12,7 @@ public class Practics {
 
     }
     public static void main(String args[]){
-        String str = "gangadhar";
+        String str = "sunday";
         // String rev = "";
 
         // System.out.println("old String : "+str);
