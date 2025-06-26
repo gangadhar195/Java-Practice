@@ -26,6 +26,7 @@ System.out.println();
             max = Math.max(max, list.get(i));
         }
         System.out.println("Maximum Element : "+max);
+        
 
     }
 }
