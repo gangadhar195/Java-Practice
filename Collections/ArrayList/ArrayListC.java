@@ -27,5 +27,13 @@ public class ArrayListC {
        System.out.println(list.contains(1));
        System.out.println(list.contains(11));
 
+       //Array List Size Method
+
+       System.out.println("Size of ArrayList : "+list.size());
+
+       for(int i=0;i<list.size();i++){
+        System.out.print(list.get(i));
+       }
+
     }
 }
