@@ -17,7 +17,16 @@ public class MultiArrayList {
         mainlist.add(list1);
         mainlist.add(list2);
         mainlist.add(list3);
+        list2.remove(1);
+        list2.remove(3);
 
-        System.out.println(mainlist);
+        for(int i=0;i<mainlist.size();i++){
+            ArrayList<Integer> currlist = mainlist.get(i);
+            for(int j=0;j<currlist.size();j++){
+                System.out.print(currlist.get(j)+" ");
+            }
+            System.out.println();
+        }
+        // System.out.println(mainlist);
     }
 }
