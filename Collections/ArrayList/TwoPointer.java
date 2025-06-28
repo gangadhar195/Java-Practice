@@ -11,7 +11,7 @@ public class TwoPointer {
             int width= Rp-Lp;
              int currWater = ht*width;
              MaxWater=Math.max(MaxWater, currWater);
-            if(Lp<Rp){
+            if(height.get(Lp)<height.get(Rp)){
                 Lp++;
             }else{
                 Rp--;
