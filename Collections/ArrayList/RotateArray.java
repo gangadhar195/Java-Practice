@@ -10,22 +10,25 @@ public class RotateArray {
             System.out.println("Array is empty");
             return -1;
         }
-        //list find target with linear search
-        if(bp==-1){
-        for(int i=0;i<n-1;i++){
-            if(list.get(i)==target){
-                return i;
-            }
-        }
-        return -1;
-    }
-        //find breaking index
+
+         //find breaking index
         for(int i=0;i<n-1;i++){
             if(list.get(i)>list.get(i+1)){
                 bp=i;
                 break;
             }
         }
+        //list find target with linear search
+        if(bp==-1){
+        for(int i=0;i<n;i++){
+            if(list.get(i)==target){
+                // System.out.println(list.get(i));
+                return i;
+            }
+        }
+        return -1;
+    }
+       
         //find star and end index
         int lp=(bp+1)%n;
         int rp=bp;
