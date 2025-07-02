@@ -34,6 +34,22 @@ public class LinkedOne {
         tail.next=newNode;
         tail=newNode;
     }
+    public void add(int idx,int data){
+        Node newNode = new Node(data);
+
+        if(idx==0){
+            addFirst(data);
+            return;
+        }
+        Node temp=head;
+        int i=0;
+        while(i<idx-1){
+            temp=temp.next;
+            i++;
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+    }
 
     public static void print(){
         Node temp=head;
@@ -46,13 +62,17 @@ public class LinkedOne {
     public static void main(String args[]){
         LinkedOne ll = new LinkedOne();
         ll.addFirst(1);
-        ll.print();
+        // ll.print();
         ll.addFirst(2);
-        ll.print();
+        // ll.print();
         ll.addLast(3);
-        ll.print();
+        // ll.print();
         ll.addLast(4);
         ll.print();
+        // ll.print();
+       ll.add(2, 11);
+       ll.print();
+
 
         
     }
