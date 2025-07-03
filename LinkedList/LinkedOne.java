@@ -106,6 +106,25 @@ public class LinkedOne {
         return -1;
     }
 
+    public int helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=helper(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+
+        return idx+1;
+    }
+
+    public int recSearch(int key){
+        return helper(head,key);
+    }
+
     public static void print(){
         Node temp=head;
         while(temp!=null){
@@ -130,10 +149,12 @@ public class LinkedOne {
        ll.print();
        ll.removeFirst();
        ll.print();
-       ll.removeLast();
-       ll.print();
-       System.out.println(ll.iterSearch(3));
-       System.out.println(ll.iterSearch(10));
+    //    ll.removeLast();
+    //    ll.print();
+    //    System.out.println(ll.iterSearch(3));
+    //    System.out.println(ll.iterSearch(10));
+    System.out.println(ll.recSearch(4));
+    System.out.println(ll.recSearch(10));
 
     System.out.println(ll.size);
 
