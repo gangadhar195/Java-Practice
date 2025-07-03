@@ -125,6 +125,20 @@ public class LinkedOne {
         return helper(head,key);
     }
 
+    public void reverse(){
+        Node prev=null;
+        Node curr=tail=head;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+
+    }
+
     public static void print(){
         Node temp=head;
         while(temp!=null){
@@ -143,20 +157,22 @@ public class LinkedOne {
         ll.addLast(3);
     //     // ll.print();
         ll.addLast(4);
-    //     ll.print();
+        ll.addLast(5);
+        ll.print();
     //     // ll.print();
     //    ll.add(2, 11);
-       ll.print();
-       ll.removeFirst();
-       ll.print();
+    //    ll.print();
+    //    ll.removeFirst();
+    //    ll.print();
     //    ll.removeLast();
     //    ll.print();
     //    System.out.println(ll.iterSearch(3));
     //    System.out.println(ll.iterSearch(10));
-    System.out.println(ll.recSearch(4));
-    System.out.println(ll.recSearch(10));
-
-    System.out.println(ll.size);
+    // System.out.println(ll.recSearch(4));
+    // System.out.println(ll.recSearch(10));
+    ll.reverse();
+        ll.print();
+    // System.out.println(ll.size);
 
         
     }
