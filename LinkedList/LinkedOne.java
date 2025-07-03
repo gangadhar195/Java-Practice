@@ -160,6 +160,43 @@ public class LinkedOne {
         prev.next=prev.next.next;
     }
 
+    public Node findMid(Node head){
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
+    public boolean isPalindrome(){
+        if(head==null || head.next==null){
+            return true;
+        }
+
+        Node midNode=findMid(head);
+        Node prev=null;
+        Node curr=midNode;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        Node right=prev;
+        Node left=head;
+
+        while (right!=null) {
+            if(left.data!=right.data){
+                return false;
+            }
+            left=left.next;
+            right=right.next;
+        }
+        return true;
+    }
     public static void print(){
         Node temp=head;
         while(temp!=null){
@@ -175,10 +212,10 @@ public class LinkedOne {
         // ll.print();
         ll.addFirst(1);
     //     // ll.print();
-        ll.addLast(3);
+        ll.addLast(1);
     //     // ll.print();
-        ll.addLast(4);
-        ll.addLast(5);
+        // ll.addLast(4);
+        // ll.addLast(5);
         ll.print();
     //     // ll.print();
     //    ll.add(2, 11);
@@ -192,8 +229,9 @@ public class LinkedOne {
     // System.out.println(ll.recSearch(4));
     // System.out.println(ll.recSearch(10));
     // ll.reverse();
-    ll.deleteNthNode(2);
-        ll.print();
+    // ll.deleteNthNode(2);
+    System.out.println(ll.isPalindrome());
+        // ll.print();
     // System.out.println(ll.size);
 
         
