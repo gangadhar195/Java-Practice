@@ -139,6 +139,27 @@ public class LinkedOne {
 
     }
 
+    public void deleteNthNode(int n){
+        int sz=0;
+        Node temp=head;
+        while(temp!=null){
+            temp=temp.next;
+            sz++;
+        }
+        if(n==sz){
+            head=head.next;
+            return;
+        }
+        int i=1;
+        int itoIdx=sz-n;
+        Node prev=head;
+        while(i<itoIdx){
+            prev=prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+    }
+
     public static void print(){
         Node temp=head;
         while(temp!=null){
@@ -170,7 +191,8 @@ public class LinkedOne {
     //    System.out.println(ll.iterSearch(10));
     // System.out.println(ll.recSearch(4));
     // System.out.println(ll.recSearch(10));
-    ll.reverse();
+    // ll.reverse();
+    ll.deleteNthNode(2);
         ll.print();
     // System.out.println(ll.size);
 
