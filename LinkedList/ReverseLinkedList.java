@@ -45,6 +45,27 @@ public class ReverseLinkedList {
             }
             head=prev;
         }
+
+        public static int removeFirst(){
+            Node temp=head;
+            int sz=0;
+            while(temp!=null){
+                temp=temp.next;
+                sz++;
+            }
+            if(sz==0){
+                System.out.println("ll is empty");
+                return Integer.MAX_VALUE;
+            }else if(sz==1){
+                int val=head.data;
+                head=tail=null;
+                return val;
+            }
+            int val=head.data;
+            head=head.next;
+            sz--;
+            return val;
+        }
         public static void print(){
             Node temp=head;
             while (temp!=null) {
@@ -61,6 +82,8 @@ public class ReverseLinkedList {
         ll.addLast(4);
         ll.print();
         ll.reverseNode();
+        ll.print();
+        ll.removeFirst();
         ll.print();
 
     }
