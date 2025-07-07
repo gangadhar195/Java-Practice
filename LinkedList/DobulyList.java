@@ -28,7 +28,18 @@ public class DobulyList {
         head = newNode;
     }
 
-    public static int removeFrist(int data) {
+    public static void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        size++;
+        tail.next = newNode;
+        tail = newNode;
+    }
+
+    public static int removeFrist() {
         if (head == null) {
             head = tail = null;
             return Integer.MAX_VALUE;
@@ -42,6 +53,22 @@ public class DobulyList {
         int val = head.data;
         head = head.next;
         head.prev = null;
+        size--;
+        return val;
+    }
+
+    public static int removeLast() {
+        if (head == null) {
+            return Integer.MIN_VALUE;
+        }
+        int val = tail.data;
+
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+        }
         size--;
         return val;
     }
@@ -60,8 +87,13 @@ public class DobulyList {
         dll.addFirst(3);
         dll.addFirst(2);
         dll.addFirst(1);
+        dll.addLast(4);
+        dll.addLast(5);
+        dll.addLast(6);
         dll.print();
-        System.out.println(dll.removeFrist(size));
+        System.out.println(dll.removeFrist());
+        dll.print();
+        System.out.println(dll.removeLast());
         dll.print();
     }
 }
