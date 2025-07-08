@@ -71,6 +71,31 @@ public class DobulyList {
         }
         size--;
         return val;
+
+    }
+
+    public void ReverDoublyLL(){
+        
+        if(head==null){
+            System.out.println("DoublyLL is empty");
+            head=tail=null;
+        }
+        // if(head==tail){
+        //     head=tail;
+        //     return;
+        // }
+        Node curr=head;
+        Node next;
+        Node prev=null;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            curr.prev=next;
+
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
     }
 
     public void print() {
@@ -91,9 +116,11 @@ public class DobulyList {
         dll.addLast(5);
         dll.addLast(6);
         dll.print();
-        System.out.println(dll.removeFrist());
-        dll.print();
-        System.out.println(dll.removeLast());
+        // System.out.println(dll.removeFrist());
+        // dll.print();
+        // System.out.println(dll.removeLast());
+        // dll.print();
+        dll.ReverDoublyLL();
         dll.print();
     }
 }
