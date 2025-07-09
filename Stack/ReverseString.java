@@ -16,7 +16,7 @@ public class ReverseString {
         return str;
     }
     public static void main(String args[]){
-        String str="abc";
+        String str="Gangadhar";
         System.out.println(reverseString(str));
     }
 }
