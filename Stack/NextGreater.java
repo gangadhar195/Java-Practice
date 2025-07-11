@@ -5,8 +5,8 @@ public class NextGreater {
         int next[] = new int[arr.length];
         Stack<Integer> s=new Stack<>();
 
-        for(int i=0;i<=arr.length-1;i++){
-            while(!s.isEmpty() && arr[s.peek()]<=arr[i]){
+        for(int i=arr.length-1;i>=0;i--){
+            while(!s.isEmpty() && arr[s.peek()]>=arr[i]){
                 s.pop();
             }
             if(s.isEmpty()){
@@ -23,5 +23,5 @@ public class NextGreater {
 }
 //next greater right change loop i=arr.length-1 to i>=,while condition <=  rightside greater
 //next greater left change loop i=0 to i<=arr.lenght-1 leftside greater
-//next smallest right while condition >= rightside smallest
+//next smallest right chage i=arr.length-1 to i>=while condition >= rightside smallest
 //next smallest left change loop i=0 to i<=arr.lenght-1 ,while >=
