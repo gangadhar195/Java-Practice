@@ -12,7 +12,18 @@ public class Parenthesis {
                 if(s.isEmpty()){
                     return false;
                 }
-                
+                if((s.peek() =='(' && ch==')')
+                 || (s.peek()=='{' && ch=='}')||
+                 (s.peek()==']' && ch==']')){
+                    s.pop();
+                }else{
+                    return false;
+                }
+            }
+            if(s.isEmpty()){
+                return true;
+            }else{
+                return false;
             }
         }
     }
