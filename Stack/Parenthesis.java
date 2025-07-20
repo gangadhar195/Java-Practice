@@ -13,22 +13,23 @@ public class Parenthesis {
                     return false;
                 }
                 if((s.peek() =='(' && ch==')')
-                 || (s.peek()=='{' && ch=='}')||
-                 (s.peek()==']' && ch==']')){
+                 || (s.peek()=='{' && ch=='}')
+                 ||(s.peek()=='[' && ch==']')){
                     s.pop();
                 }else{
                     return false;
                 }
             }
+        }
             if(s.isEmpty()){
                 return true;
             }else{
                 return false;
             }
-        }
+        
     }
     public static void main(String args[]){
-        String str = "(({}))[]";
+        String str = "({}){[]}";
 
         System.out.println(isValid(str));
     }
