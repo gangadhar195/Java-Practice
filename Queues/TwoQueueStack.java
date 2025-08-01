@@ -31,7 +31,7 @@ public class TwoQueueStack {
             if(!q1.isEmpty()){
                 while (!q1.isEmpty()) {
                     top = q1.remove();
-                    if(!q1.isEmpty()){
+                    if(q1.isEmpty()){
                         break;
                     }
                 q2.add(top);
@@ -39,7 +39,7 @@ public class TwoQueueStack {
             }else{
                 while (!q2.isEmpty()) {
                     top=q2.remove();
-                    if(!q2.isEmpty()){
+                    if(q2.isEmpty()){
                         break;
                     }
                     q1.add(top);
