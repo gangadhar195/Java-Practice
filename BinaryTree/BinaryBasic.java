@@ -19,6 +19,9 @@ public class BinaryBasic {
 
         public static Node builderTree(int nodes[]) {
             idx++;
+            if(idx>=nodes.length){
+                return null;
+            }
             if (nodes[idx] == -1) {
                 return null;
             }
@@ -29,21 +32,41 @@ public class BinaryBasic {
         }
         public static void preorder(Node root){
             if(root==null){
-                System.out.print(root+" ");
+                // System.out.print(root+" ");
                 return;
             }
             System.out.print(root.data+" ");
             preorder(root.left);
             preorder(root.right);
         }
+        public static void inorder(Node root){
+            if(root==null){
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data+" ");
+            // preorder(root);
+            inorder(root.right);
+        }
+        public static void postorder(Node root){
+            if(root==null){
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data+" ");
+
+        }
     }
 
     public static void main(String args[]) {
-        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
+        int nodes[] = { 1,2,4,7,-1,-1,8,-1,-1,5,-1,-1,3,-1,6,-1,9 };
         BinaryTree tree=new BinaryTree();
         Node root = tree.builderTree(nodes);
         System.out.println("Root Node is: " + root.data);
-        tree.preorder(root);
+        // tree.preorder(root);
+        // tree.inorder(root);
+        tree.postorder(root);
     }
 }
 
