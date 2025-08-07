@@ -47,6 +47,16 @@ public class Treeheight {
             int totalNode = leftcount + rightcount +1;
             return totalNode;
         }
+
+        public static int sumofNode(Node root){
+            if(root==null){
+                return 0;
+            }
+            int leftsum = sumofNode(root.left);
+            int rightSum = sumofNode(root.right);
+            int totalsum = leftsum + rightSum + root.data;
+            return totalsum;
+        }
     }
     public static void main(String args[]){
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6};
@@ -55,5 +65,6 @@ public class Treeheight {
        int height= tree.TreeH(root);
        System.out.println("Height : "+height);
        System.out.println("Total Node Count : "+tree.count(root));
+       System.out.println("Total sum of Node : "+tree.sumofNode(root));
     }
 }
