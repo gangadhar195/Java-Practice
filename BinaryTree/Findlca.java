@@ -81,6 +81,24 @@ public class Findlca{
         int dist2 = lcadist(lca,n2);
         return dist1 + dist2;
      }
+     public static int KAncestor(Node root,int n,int k){
+        if(root==null){
+            return -1;
+        }
+        if(root.data==n){
+            return 0;
+        }
+        int leftDist = KAncestor(root.left,n,k);
+        int rightDist = KAncestor(root.right,n,k);
+        if(leftDist==-1 && rightDist==-1){
+            return -1;
+        }
+        int max = Math.max(leftDist,rightDist);
+        if(max+1==k){
+            System.out.println(root.data+" ");
+        }
+        return max+1;
+     }
     public static void main(String args[]){
          Node root = new Node(1);
         root.left = new Node(2);
@@ -89,11 +107,14 @@ public class Findlca{
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        int n1=4,n2=6;
+        // int n1=4,n2=6;
+        int n=4,k=1;
         // lca(root,n1,n2)
         // System.out.println("LCA 1: "+lca(root,n1,n2).data);
         // System.out.print("LCA 2: "+lca2(root,n1,n2).data);
-        System.out.print(minDist(root,n1,n2));
+        // System.out.print(minDist(root,n1,n2));
+        // System.out.print(KAncestor(root,n,k));
+        KAncestor(root,n,k);
 
     }
 }
