@@ -41,6 +41,23 @@ public class Findlca{
         Node lca = path1.get(i-1);
         return lca;  
      }
+     public static Node lca2(Node root,int n1,int n2){
+        if(root==null || root.data==n1 || root.data==n2){
+            return root;
+        }
+        Node leftlca = lca2(root.left,n1,n2);
+        Node rightlca = lca2(root.right,n1,n2);
+        if(leftlca == null){
+            return rightlca;
+        }
+        if(rightlca==null){
+            return leftlca;
+        }
+        if(rightlca !=null && leftlca!=null){
+            return root;
+        }
+        return root;
+     }
     public static void main(String args[]){
          Node root = new Node(1);
         root.left = new Node(2);
@@ -49,8 +66,10 @@ public class Findlca{
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        int n1=6,n2=7;
+        int n1=6,n2=3;
         // lca(root,n1,n2)
-        System.out.print(lca(root,n1,n2).data);
+        System.out.println("LCA 1: "+lca(root,n1,n2).data);
+        System.out.print("LCA 2: "+lca2(root,n1,n2).data);
+
     }
 }
