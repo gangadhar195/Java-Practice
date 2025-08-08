@@ -35,7 +35,8 @@ public class Treeheight {
             int height=0;
             int lh=TreeH(root.left);
             int rh=TreeH(root.right);
-             return Math.max(lh, rh)+1;
+            height = Math.max(lh, rh)+1;
+             return height;
             // System.out.println("Tree Height : "+ height);
         }
         public static int count(Node root){
@@ -62,9 +63,9 @@ public class Treeheight {
                 return 0;
             }
             int leftdiameter = diameter2(root.left);
-            int lh = TreeH(root.left);
             int rightdiameter = diameter2(root.right);
             int rh = TreeH(root.right);
+            int lh = TreeH(root.left);
             int selfdiameter = rh + lh+1;
             int findlegth = Math.max(selfdiameter,Math.max(rightdiameter, leftdiameter));
             return findlegth;
@@ -88,6 +89,8 @@ public class Treeheight {
             return new Info(daim, ht);
         }
 
+        public static boolean isSubtree(Node nodes,)
+
     }
     public static void main(String args[]){
         int nodes[]={1,2,4,7,-1,-1,8,-1,-1,5,-1,-1,3,-1,6,-1,9};
@@ -97,7 +100,7 @@ public class Treeheight {
        System.out.println("Height : "+height);
        System.out.println("Total Node Count : "+tree.count(root));
        System.out.println("Total sum of Node : "+tree.sumofNode(root));
-       System.out.println("Total sum of Node : "+tree.diameter2(root));
+       System.out.println("diameter 2 of Node : "+tree.diameter2(root));
        System.out.println("Diameter of Tree : "+tree.daimeter(root).diam);
        System.out.println("Height of Tree : "+tree.daimeter(root).ht);
 
