@@ -58,6 +58,29 @@ public class Findlca{
         }
         return root;
      }
+     public static int lcadist(Node root,int n){
+        if(root==null){
+            return -1;
+        }
+        if(root.data==n){
+            return 0;
+        }
+        int leftdist = lcadist(root.left,n);
+        int rightdist = lcadist(root.right,n);
+        if(leftdist == -1 && rightdist==-1){
+            return -1;
+        }else if(leftdist==-1){
+            return rightdist+1;
+        }else{
+            return leftdist+1;
+        }
+     }
+     public static int minDist(Node root,int n1,int n2){
+        Node lca=lca2(root,n1,n2);
+        int dist1 = lcadist(lca,n1);
+        int dist2 = lcadist(lca,n2);
+        return dist1 + dist2;
+     }
     public static void main(String args[]){
          Node root = new Node(1);
         root.left = new Node(2);
@@ -66,10 +89,11 @@ public class Findlca{
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        int n1=6,n2=3;
+        int n1=4,n2=6;
         // lca(root,n1,n2)
-        System.out.println("LCA 1: "+lca(root,n1,n2).data);
-        System.out.print("LCA 2: "+lca2(root,n1,n2).data);
+        // System.out.println("LCA 1: "+lca(root,n1,n2).data);
+        // System.out.print("LCA 2: "+lca2(root,n1,n2).data);
+        System.out.print(minDist(root,n1,n2));
 
     }
 }
