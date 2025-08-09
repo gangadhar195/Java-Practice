@@ -27,6 +27,19 @@ public class BTSBasic {
         System.out.print(root.data+" ");
         inorder(root.right);
     }
+    public static boolean search(Node root,int n){
+        if(root==null){
+            return false;
+        }
+        if(root.data==n){
+            return true;
+        }
+        if(root.data>n){
+            return search(root.left, n);
+        }else{
+            return search(root.right, n);
+        }
+    }
     public static void main(String args[]){
         int values[] = {5,1,3,4,2,7};
         Node root=null;
@@ -35,5 +48,10 @@ public class BTSBasic {
         }
         inorder(root);
         System.out.println();
+        if(search(root, 4)){
+            System.out.println("Found ");
+        }else{
+            System.out.println("Not Found");
+        }
     }
 }
