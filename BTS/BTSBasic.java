@@ -40,6 +40,38 @@ public class BTSBasic {
             return search(root.right, n);
         }
     }
+    public static Node delete (Node root,int val){
+        if(root.data < val){
+            root.right=delete(root.right, val);
+        }else if(root.data > val){
+            root.left = delete(root.left, val);
+        }
+        else{
+            //voila
+           // case 1
+           if(root.left==null && root.right==null){
+            return null;
+           }
+           //case 2
+           if(root.left==null){
+            return root.right;
+           }
+           else if(root.right == null){
+            return root.left;
+           }
+           //case3
+           Node Is = findInorderSuccessor(root.right);
+           root.data = Is.data;
+           root.right = delete(root.right, Is.data);
+        }
+        return root;
+    }
+    public static Node findInorderSuccessor(Node root){
+        while(root.left!=null){
+            root = root.left;
+        }
+        return root;
+    }
     public static void main(String args[]){
         int values[] = {5,1,3,4,2,7};
         Node root=null;
@@ -48,10 +80,14 @@ public class BTSBasic {
         }
         inorder(root);
         System.out.println();
-        if(search(root, 4)){
-            System.out.println("Found ");
-        }else{
-            System.out.println("Not Found");
-        }
+        // if(search(root, 4)){
+        //     System.out.println("Found ");
+        // }else{
+        //     System.out.println("Not Found");
+        // }
+       root =  delete(root, 3);
+       System.out.println();
+       inorder(root);
+    //    System.out.println(root);
     }
 }
