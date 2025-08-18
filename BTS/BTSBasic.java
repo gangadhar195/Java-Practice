@@ -108,8 +108,41 @@ public class BTSBasic {
         printRoot2Leaf(root.right, path);
         path.remove(path.size()-1);
     }
+
+    public static boolean isValidBTS(Node root ,Node min,Node max){
+        if(root == null){
+            return true;
+        }
+         if(min != null && root.data <= min.data){
+          return false;  
+        }
+        else if(max != null && root.data >= max.data){
+            return false;
+        }
+        return isValidBTS(root.left, min, root) && isValidBTS(root.right, root, max);
+    }
+
+    public static Node createMirror(Node root){
+        if(root == null){
+            return null;
+        }
+        Node leftMirror = createMirror(root.left);
+        Node rightMirror = createMirror(root.right);
+        root.left=rightMirror;
+        root.right = leftMirror;
+        return root;
+    }
+
+    public static void preorder(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
     public static void main(String args[]){
-        int values[] = {8,5,3,1,4,6,10,11,14};
+        int values[] = {1,5,3,8,4,6,10,11,14};
         Node root=null;
         for(int i=0;i<values.length;i++){
            root= insert(root, values[i]);
@@ -126,7 +159,15 @@ public class BTSBasic {
     //    inorder(root);
     //    System.out.println(root);
     // printInRange(root, 5, 12);
-    printRoot2Leaf(root,new ArrayList<>());
+    // printRoot2Leaf(root,new ArrayList<>());
+    // if(isValidBTS(root, null, null)){
+    //     System.out.println("is Valid");
+    // }else{
+    //     System.out.println("Not Valid");
+    // }
+
+    root = createMirror(root);
+    preorder(root);
         
     }
 }
