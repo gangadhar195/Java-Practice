@@ -36,7 +36,7 @@ public class BTS2BS {
         }
         if(leftInfo.isBTs && rightInfo.isBTs){
             maxBTs = Math.max(maxBTs, size);
-            new Info(true, min, max, size)
+            return new Info(true, min, max, size);
         }
         return new Info(false, min, max, size);
     }
@@ -51,6 +51,7 @@ public class BTS2BS {
         root.right.right = new Node(70);
         root.right.right.left = new Node(65);
         root.right.right.right = new Node(80);
-        largestBTS(root);
+        Info info = largestBTS(root);
+        System.out.println("Largest BTs size: "+maxBTs);
     }
 }
