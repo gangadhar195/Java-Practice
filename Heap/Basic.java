@@ -1,8 +1,9 @@
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Basic {
     public static void main(String args[]){
-        PriorityQueue<Integer> pq = new PriorityQueue<>;
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
         pq.add(3);
         pq.add(5);
         pq.add(1);
